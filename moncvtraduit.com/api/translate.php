@@ -57,8 +57,8 @@ try {
     
     // Validate file size
     if ($file['size'] > $config['max_file_size']) {
-        $maxSizeMB = round($config['max_file_size'] / 1024 / 1024);
-        throw new Exception("Fichier trop volumineux. Taille maximale: {$maxSizeMB}MB");
+       $maxSizeMB = round($maxFileSize / 1024 / 1024, 1);
+    throw new Exception("Fichier trop volumineux. Taille maximale: {$maxSizeMB}MB");
     }
     
     // Get translation parameters
